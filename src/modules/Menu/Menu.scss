@@ -1,0 +1,48 @@
+$menu-color: white;
+
+div.menu-outter {
+  font-size: 1.3rem;
+  z-index: 1000;
+
+  a.menu-trigger {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1002;
+
+    font-size: 2rem;
+    color: $brand-color;
+
+  }
+
+  div.menu-inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 300px;
+    z-index: 1003;
+    transform: translateX(-200%);
+    background-color: $darker-blue;
+
+    ul.menu-content {
+      li {
+        a {
+          .fi {
+            font-size: 2rem;
+          }
+          color: $brand-color;
+        }
+      }
+    }
+  }
+
+  &.open {
+    a.menu-trigger {
+      z-index: 0;
+    }
+    div.menu-inner {
+      transform: translateX(0);
+    }
+  }
+}

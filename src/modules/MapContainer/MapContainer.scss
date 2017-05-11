@@ -1,0 +1,10 @@
+div.mapContainer {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  div.map {
+    height: 100%;
+    width: 100%;
+  }
+}

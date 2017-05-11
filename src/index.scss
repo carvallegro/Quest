@@ -1,0 +1,30 @@
+// 1. Configuration and helpers (abstract/)
+@import
+  'stylesheets/abstract/variables',
+  'stylesheets/abstract/functions',
+  'stylesheets/abstract/mixins';
+
+// 2. Vendors (vendors/)
+@import
+  'stylesheets/vendors/flaticon/flaticon';
+
+// 3. Base stuff (base/)
+@import
+  'stylesheets/base/reset',
+  'stylesheets/base/base',
+  'stylesheets/base/font',
+  'stylesheets/base/typography',
+  'stylesheets/base/helpers';
+
+// 4. Layout-related sections (layout)
+
+// 5. Components
+@import
+  'modules/App.scss',
+  'modules/Menu/Menu.scss',
+  'modules/MapContainer/MapContainer.scss',
+  'modules/TextOverlay/TextOverlay.scss',
+  'modules/MapLine/MapLine.scss',
+  'modules/PlaceMarker/PlaceMarker.scss';
+
+

@@ -1,0 +1,36 @@
+[
+  {
+    "id": 2,
+    "date": "2012-04-23T18:25:43.511Z",
+    "type": "STORY OR QUEST",
+    "title": "First article",
+    "content": "foo bar content about the First Article",
+    "post": {
+      "id": 30,
+      "title": "Paris",
+      "show_title": false,
+      "iconType": "home",
+      "position": {
+        "lat": 48.859529,
+        "lng": 2.343104
+      }
+    }
+  },
+  {
+    "id": 1,
+    "date": "2012-04-30T18:25:43.511Z",
+    "type": "STORY OR QUEST",
+    "title": "Second article",
+    "content": "foo bar about the Seconde Article",
+    "post": {
+      "id": 10,
+      "title": "Melbourne",
+      "show_title": false,
+      "iconType": "home",
+      "position": {
+        "lat": -37.816977,
+        "lng": 144.965170
+      }
+    }
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "name": "test-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "load-script": "^1.0.0",
+    "material-ui": "^0.17.1",
+    "react": "^15.4.2",
+    "react-async-script-loader": "^0.2.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "react-tap-event-plugin": "^2.0.1",
+    "redux": "^2.0.0",
+    "snapsvg": "^0.5.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "node-sass": "^4.5.0",
+    "npm-run-all": "^4.0.2",
+    "postcss-cli": "^3.0.0",
+    "react-scripts": "0.9.5",
+    "svg-inline-loader": "^0.7.1"
+  },
+  "scripts": {
+    "prefix-css": "postcss src/index.css --output src/index.css",
+    "build-css": "node-sass --output-style compressed src/index.scss -o src/ && npm run prefix-css",
+    "watch-css": "npm run build-css && node-sass --output-style compressed src/index.css -o src/ --watch",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

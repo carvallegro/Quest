@@ -1,0 +1,17 @@
+i.place-marker {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  line-height: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+  color: map_get($amber-palette, 'base') !important;
+
+  &.hover {
+    color: map_get($amber-palette, 'light-2');
+  }
+  &.active {
+    color: map_get($amber-palette, 'dark-2');
+  }
+
+}

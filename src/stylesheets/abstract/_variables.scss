@@ -1,0 +1,112 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Abel', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Header font family
+/// @type List
+$heading-font-stack: 'Abril Fatface', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+/// Base text size
+/// @type Number
+$text-size-default: 16px;
+
+/// Dark blue
+/// @type Color
+$dark-blue: rgb(25, 51, 65) !default;
+
+/// Darker blue
+/// @type Color
+$darker-blue: rgb(13, 37, 46) !default;
+
+/// Light blue
+/// @type Color
+$light-blue: rgb(44, 90, 113) !default;
+
+/// Material Color Amber Palette
+/// @type Map
+$amber-palette: (
+        'base' : #ffc107,
+        'light-5' : #fff8e1,
+        'light-4' : #ffecb5,
+        'light-3' : #ffe083,
+        'light-2' : #ffd451,
+        'light-1' : #ffca2c,
+        'dark-1' : #ffbb06,
+        'dark-2' : #ffb305,
+        'dark-3' : #ffab04,
+        'dark-4' : #ff9e02,
+        'accent-1' : #ffffff,
+        'accent-2' : #fffaf2,
+        'accent-3' : #ffe4bf,
+        'accent-4' : #ffd9a6
+) !default;
+
+/// Material Color Amber Base
+/// @type Color
+$amber-color: map_get($amber-palette, 'base');
+
+/// Material Color Yellow Palette
+/// @type Map
+$yellow-palette: (
+        'base' : #ffeb3b,
+        'light-5' : #fffde7,
+        'light-4' : #fff9c4,
+        'light-3' : #fff59d,
+        'light-2' : #fff176,
+        'light-1' : #ffee58,
+        'dark-1' : #ffe935,
+        'dark-2' : #ffe52d,
+        'dark-3' : #ffe226,
+        'dark-4' : #ffdd19,
+        'accent-1' : #ffffff,
+        'accent-2' : #fffffd,
+        'accent-3' : #fff7ca,
+        'accent-4' : #fff2b1
+) !default;
+
+/// Material Color Yellow Base
+/// @type Color
+$yellow-color: map_get($yellow-palette, 'base');
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(34, 34, 34) !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: $amber-color !default;
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+        'small': 320px,
+        'medium': 768px,
+        'large': 1024px,
+) !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

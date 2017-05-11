@@ -1,0 +1,8 @@
+body {
+  font-family: $text-font-stack;
+  font-size: $text-size-default;
+}
+
+@include headings() {
+  font-family: $heading-font-stack;
+}
