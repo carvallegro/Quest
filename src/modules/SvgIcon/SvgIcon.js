@@ -2,6 +2,7 @@
  * Created by vcarmignac on 27/3/17.
  */
 import React, {Component} from 'react';
+import PropTypes from 'prop-types'
 import map1 from './svg/map-1.svg'
 import menu from './svg/menu.svg'
 import notebook2 from './svg/notebook-2.svg'
@@ -24,7 +25,7 @@ class SvgIcon extends Component {
 }
 
 SvgIcon.propTypes = {
-    icon: React.PropTypes.string.isRequired
+    icon: PropTypes.string.isRequired
 };
 
 export default SvgIcon;

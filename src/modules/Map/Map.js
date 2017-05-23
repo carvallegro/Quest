@@ -2,15 +2,15 @@
  * Created by vcarmignac on 21/3/17.
  */
 import React, {Component} from 'react';
+import PropTypes from 'prop-types'
 import googleMapStyle from './google-map-custom-style.json';
 import GoogleMap from '../GoogleMapProvider'
 import TextOverlay from '../TextOverlay/TextOverlay'
 import MapLine from '../MapLine/MapLine'
 import PlaceMarker from '../PlaceMarker/PlaceMarker'
-import PinTypes from '../PinTypes'
 
 /*global google*/
-class MapContainer extends Component {
+class Map extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -84,4 +84,4 @@ class MapContainer extends Component {
     }
 }
 
-export default MapContainer
+export default Map;

@@ -14,7 +14,6 @@ export default () => {
             strokeColor: "#ffc107",
             strokeOpacity: 1,
             strokeWeight: 4,
-            geodesic: true,
             map: map
         });
         this.path_ = this.polyline.getPath();

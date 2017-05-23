@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types'
 import MapObject from '../MapObject';
 import GoogleMap from '../GoogleMapProvider';
 import PinType from '../PinTypes';
@@ -22,6 +23,6 @@ class PlaceMarker extends MapObject {
 }
 
 PlaceMarker.propTypes = Object.assign({}, MapObject.propTypes, {
-    type: PropTypes.instanceOf(PinType),
+    type: PropTypes.instanceOf(PinType)
 });
 export default PlaceMarker;
