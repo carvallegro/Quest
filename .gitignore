@@ -7,3 +7,5 @@ nodes_modules/**
 node_modules/
 
 \.idea/
+
+src/index\.css
