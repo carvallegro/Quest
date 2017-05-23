@@ -4,8 +4,9 @@ nodes_modules/**
 
 \.env
 
-node_modules/
+**/node_modules/
 
 \.idea/
 
-src/index\.css
+frontend/src/index\.css
+/frontend/node_modules/
