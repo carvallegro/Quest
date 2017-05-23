@@ -1,5 +1,5 @@
 import {inherits, calculateSize} from '../_common-gmap-objects';
-import {toggleDOMDefault, onRemoveDefault} from '../_defaults';
+import {toggleDOMDefault, onRemoveDefault, updatePositionDefault} from '../_defaults';
 
 /*global google*/
 export default () => {
@@ -15,19 +15,19 @@ export default () => {
         this.elem_ = null;
         this.setMap(map);
 
-
     };
 
 
     inherits(placeMarker, google.maps.OverlayView);
     placeMarker.prototype.onRemove = onRemoveDefault;
     placeMarker.prototype.toggleDOM = toggleDOMDefault;
+    placeMarker.prototype.updatePosition = updatePositionDefault;
 
     placeMarker.prototype.onAdd = function () {
         let self = this;
         let marker = document.createElement('i');
         marker.style.position = 'absolute';
-        marker.className = 'post-marker fi flaticon-' + this.type_;
+        marker.classList.add('place-marker', 'fi', 'flaticon-' + this.type_);
 
         google.maps.event.addDomListener(marker, "click", function () {
             console.log('TODO click');
@@ -42,7 +42,6 @@ export default () => {
         });
         google.maps.event.addDomListener(marker, "mouseleave", function () {
             marker.classList.remove('hover');
-
         });
 
 

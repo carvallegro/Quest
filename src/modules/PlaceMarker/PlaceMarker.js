@@ -17,6 +17,12 @@ class PlaceMarker extends MapObject {
         this.object = GoogleMap.Custom.PlaceMarker(this.props.map, position, typeName, this.props.onClick);
     }
 
+
+    componentDidUpdate() {
+        this.componentWillUnmount();
+        this.createObject();
+    }
+
     render() {
         return (<span>Marker element</span>);
     }
