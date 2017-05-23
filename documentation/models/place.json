@@ -2,7 +2,7 @@
   "id": 0,
   "title": "Melbourne",
   "show_title": false,
-  "iconType": "home",
+  "pinType": "home",
   "position": {
     "lat": 123.4325423,
     "lng": 65.543342
