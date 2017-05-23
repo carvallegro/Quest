@@ -1,22 +1,19 @@
 import {connect} from 'react-redux'
-import {toggleMenu} from '../actions'
+import {toggleMenu, setMapPost, displayPostContent} from '../actions'
 import Menu from '../modules/Menu/Menu'
 
 const mapStateToProps = (state) => {
-    console.log('maoptateToProps');
-    console.log(state);
-
     return {
         isMenuOpen: state.menu,
-        posts: state.posts // TODO : remove. Just for test
+        posts: state.posts
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        toggleMenu: (isMenuOpen) => {
-            dispatch(toggleMenu(isMenuOpen))
-        }
+        toggleMenu: isMenuOpen => dispatch(toggleMenu(isMenuOpen)),
+        setMapPost: post => dispatch(setMapPost(post)),
+        displayPostContent: post => dispatch(displayPostContent(post))
     }
 };
 
