@@ -3,8 +3,8 @@ services:
   node:
     image: node:alpine
     ports:
-      - 3100:3000
+      - 3100:3100
     working_dir: /usr/src/app
     volumes:
       - ./:/usr/src/app
-    command: node app.js
+    command: node dist/app.js
