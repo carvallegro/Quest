@@ -1,48 +1,85 @@
-$menu-color: white;
+$menu-text-color: $dark-blue;
+$menu-background-color: map_get($amber-palette, 'dark-1');
+$menu-open-transition: width 500ms ease-in;
+$button-open-transition: transform 500ms ease-in;
 
 div.menu-outter {
-  font-size: 1.3rem;
+  position: fixed;
   z-index: 1000;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  display: flex;
+  font-size: 1.3rem;
+  background-color: $menu-background-color;
 
-  a.menu-trigger {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1002;
+  div.menu-header {
+    position: relative;
+    display: inline-block;
+    height: 100%;
 
-    font-size: 2rem;
-    color: $brand-color;
+    a.menu-trigger {
+      position: relative;
+      top: 50%;
+      font-size: 2rem;
+      line-height: 2rem;
+      color: $menu-text-color;
+      &.menu-opener > i::before {
+        transform: rotate(180deg);
+        transition: $button-open-transition;
+      }
+    }
 
+    .menu-header-actions {
+      list-style: none;
+      li {
+        padding: 5px 5px;
+      }
+      li.first {
+        background-color: map_get($amber-palette, 'light-2');
+      }
+
+      li.second {
+        background-color: map_get($amber-palette, 'base');
+      }
+
+      li.third {
+        background-color: map_get($amber-palette, 'dark-2');
+      }
+    }
   }
 
   div.menu-inner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 300px;
-    z-index: 1003;
-    transform: translateX(-200%);
-    background-color: $darker-blue;
+    display: inline-block;
+    width: 0px;
+    transition: $menu-open-transition;
+    background-color: $menu-background-color;
+    color: $menu-text-color;
+    overflow-x: hidden;
+    white-space: nowrap;
 
     ul.menu-content {
+      list-style: none;
       li {
         a {
           .fi {
             font-size: 2rem;
           }
-          color: $brand-color;
+          color: $menu-text-color;
         }
       }
     }
   }
 
   &.open {
-    a.menu-trigger {
-      z-index: 0;
+    div.menu-header a.menu-trigger.menu-opener > i::before {
+      transform: rotate(0deg);
+      transition: $button-open-transition;
     }
+
     div.menu-inner {
-      transform: translateX(0);
+      width: 200px;
+      transition: $menu-open-transition;
     }
   }
 }
