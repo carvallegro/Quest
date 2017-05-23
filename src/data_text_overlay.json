@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "text": "Paris",
+    "textSize": 1,
+    "position": {
+      "lat": 48.859529,
+      "lng": 2.343104
+    }
+  },
+  {
+    "id": 2,
+    "text": "Russie",
+    "textSize": 10,
+    "position": {
+      "lat": 62.642520,
+      "lng": 87.092891
+    }
+  },
+  {
+    "id": 3,
+    "text": "Honk Kong",
+    "textSize": 1,
+    "position": {
+      "lat": 24.269321,
+      "lng": 113.158083
+    }
+  },
+  {
+    "id": 4,
+    "text": "Australia",
+    "textSize": 5,
+    "position": {
+      "lat": -23,
+      "lng": 133.919558
+    }
+  }
+]

@@ -6,12 +6,17 @@ import App from './modules/App'
 import reduxApp from './reducers/'
 import './index.css'
 
-import dataPosts from './data_post.json';
+import dataPosts from './data_post.json'
+import dataTextOverlays from './data_text_overlay.json'
 
 let store = createStore(reduxApp);
 store.dispatch({
     type: 'ADD_MULTIPLE_POSTS',
     posts: dataPosts
+});
+store.dispatch({
+    type: 'TEXT_OVERLAY_ADD_MULTIPLE',
+    textOverlays: dataTextOverlays
 });
 
 ReactDOM.render(

@@ -4,7 +4,8 @@ import {connect} from "react-redux";
 
 const mapStateToProps = (state) => {
     return {
-        mapProperties: state.map
+        mapProperties: state.map,
+        textOverlays: state.textOverlays
     }
 };
 
