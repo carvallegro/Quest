@@ -3,6 +3,8 @@ import {Enum} from 'enumify';
 class PinTypes extends Enum{}
 
 PinTypes.initEnum([
+    'HOME',
+    'HOUSE',
     'PIN',
     'PLACEHOLDER',
     'PLACEHOLDER_1',
@@ -10,6 +12,6 @@ PinTypes.initEnum([
     'PLACEHOLDER_3',
     'PLACEHOLDERS',
 
-]); // Todo
+]);
 
 export default PinTypes;

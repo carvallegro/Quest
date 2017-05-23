@@ -5,11 +5,11 @@
     "type": "STORY OR QUEST",
     "title": "First article",
     "content": "foo bar content about the First Article",
-    "post": {
+    "place": {
       "id": 30,
       "title": "Paris",
       "show_title": false,
-      "iconType": "home",
+      "pinType": "HOUSE",
       "position": {
         "lat": 48.859529,
         "lng": 2.343104
@@ -22,11 +22,11 @@
     "type": "STORY OR QUEST",
     "title": "Second article",
     "content": "foo bar about the Seconde Article",
-    "post": {
+    "place": {
       "id": 10,
       "title": "Melbourne",
       "show_title": false,
-      "iconType": "home",
+      "pinType": "HOME",
       "position": {
         "lat": -37.816977,
         "lng": 144.965170
