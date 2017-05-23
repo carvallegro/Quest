@@ -1,8 +1,9 @@
 {
-  "name": "test-app",
+  "name": "quest-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "enumify": "^1.0.4",
     "load-script": "^1.0.0",
     "material-ui": "^0.17.1",
     "prop-types": "^15.5.10",
