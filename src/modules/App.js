@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import MenuContainer from '../containers/menuContainer';
-import MapContainer from './MapContainer/MapContainer';
+import MapContainer from '../containers/mapContainer';
 import scriptLoader from 'react-async-script-loader'
 
 /*global google*/
@@ -18,7 +18,6 @@ class App extends Component {
                 this.setState({
                     isMapsLoaded: true
                 });
-
             }
             else this.props.onError();
         }
