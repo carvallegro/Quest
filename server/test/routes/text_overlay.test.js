@@ -5,10 +5,10 @@ chai.use(chaihttp);
 
 import app from '../../src/app';
 
-describe('route /post', () => {
+describe('route /text-overlay', () => {
     it("'/'should produce JSON result", done => {
         chai.request(app)
-            .get('/api/post')
+            .get('/api/text-overlay')
             .end((err, res) => {
                 res.statusCode.should.equal(200);
                 res.type.should.equal('application/json');

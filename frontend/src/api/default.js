@@ -1,7 +1,7 @@
 export default class defaultApi {
     static BASE_URL = process.env.REACT_APP_API_HOST + '/api';
 
-    // TODO : fix this CORS situation
+    // TODO : fix this CORS situationgit
     static DEFAULT_FETCH_OPTIONS = {
         method: 'GET',
         mode: 'cors',
