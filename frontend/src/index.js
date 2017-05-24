@@ -1,19 +1,17 @@
+import 'babel-polyfill'
+import 'whatwg-fetch'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
-import {createStore} from 'redux'
 import App from './modules/App'
-import reduxApp from './reducers/'
+import configureStore from './configureStore'
+import {loadPosts} from './actions'
 import './index.css'
 
-import dataPosts from './data_post.json'
 import dataTextOverlays from './data_text_overlay.json'
 
-let store = createStore(reduxApp);
-store.dispatch({
-    type: 'ADD_MULTIPLE_POSTS',
-    posts: dataPosts
-});
+const store = configureStore();
+store.dispatch(loadPosts());
 store.dispatch({
     type: 'TEXT_OVERLAY_ADD_MULTIPLE',
     textOverlays: dataTextOverlays

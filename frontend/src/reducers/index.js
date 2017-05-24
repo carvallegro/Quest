@@ -4,11 +4,11 @@ import menu from './menu'
 import posts from './posts'
 import textOverlays from './textOverlays'
 
-const reduxApp = combineReducers({
+const reducers = combineReducers({
     map,
     menu,
     posts,
     textOverlays
 });
 
-export default reduxApp;
+export default reducers;
