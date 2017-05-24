@@ -35,30 +35,11 @@ export const displayPostContent = (post = null) => {
 /**
  * First async method
  */
-
-const loadPostsAPI = () => {
-    // Todo set the CORS problem
-    return fetch(process.env.REACT_APP_API_HOST + '/api/post',
-        {
-            method: 'GET',
-            mode: 'cors',
-            header: {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
-            }
-        }).then(response => {
-        console.log(response);
-        return response.json();
-    }).catch(error => {
-        console.error('Was not able to fetch posts data');
-        console.error(error);
-        return error;
-    });
-};
+import postApi from '../api/post';
 
 export function loadPosts() {
     return function (dispatch) {
-        return loadPostsAPI().then(posts =>
+        return postApi.fetchPosts().then(posts =>
             dispatch(addMultiplesPosts(posts))
         ).catch(error => {
             throw(error)
