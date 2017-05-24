@@ -1,0 +1,26 @@
+{
+  "name": "quest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^3.4.1",
+    "npm-run-all": "^4.0.2"
+  },
+  "scripts": {
+    "start-front": "npm start --prefix ./frontend/",
+    "start-server": "npm start --prefix ./server/",
+    "start": "npm-run-all -p start-server start-front"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carvallegro/Quest.git"
+  },
+  "author": "carvallegro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carvallegro/Quest/issues"
+  },
+  "homepage": "https://github.com/carvallegro/Quest#readme"
+}
