@@ -72,7 +72,7 @@ class Map extends Component {
                             pos={post.place.position}
                             type={post.place.pinType}
                             onClick={() =>
-                                this.props.displayPostContent(post)
+                                this.props.displayPostContent(post.id)
                             }/>;
     }
 

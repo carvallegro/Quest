@@ -7,7 +7,7 @@
     "content": "foo bar content about the First Article",
     "place": {
       "id": 30,
-      "title": "Paris",
+      "title": "Pariss",
       "show_title": false,
       "pinType": "HOUSE",
       "position": {

@@ -5,7 +5,7 @@ function map(state = {}, action) {
     switch (action.type) {
         case 'SET_MAP_POST':
             return Object.assign({}, {
-                post: action.post
+                postId: action.postId
             });
         default:
             return state;

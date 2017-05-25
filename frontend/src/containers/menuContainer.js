@@ -12,8 +12,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         toggleMenu: isMenuOpen => dispatch(toggleMenu(isMenuOpen)),
-        setMapPost: post => dispatch(setMapPost(post)),
-        displayPostContent: post => dispatch(displayPostContent(post))
+        setMapPost: postId => dispatch(setMapPost(postId)),
+        displayPostContent: postId => dispatch(displayPostContent(postId))
     }
 };
 

@@ -9,7 +9,7 @@ export const addMultipleTextOverlays = textOverlays => {
         type: 'TEXT_OVERLAY_ADD_MULTIPLE',
         textOverlays: textOverlays
     }
-}
+};
 
 export const addPost = post => {
     return {
@@ -25,17 +25,17 @@ export const addMultiplesPosts = posts => {
     };
 };
 
-export const setMapPost = (post = null) => {
+export const setMapPost = (postId = null) => {
     return {
         type: 'SET_MAP_POST',
-        post: post
+        postId: postId
     };
 };
 
-export const displayPostContent = (post = null) => {
+export const displayPostContent = (postId = null) => {
     return {
         type: 'SHOW_POST_CONTENT',
-        post: post
+        id: postId
     }
 };
 

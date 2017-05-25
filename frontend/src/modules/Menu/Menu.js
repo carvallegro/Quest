@@ -21,21 +21,17 @@ class Menu extends Component {
                             <i className="fi flaticon-idea"></i>
                         </a></li>
                     </ul>
-
                 </div>
                 <div className="menu-inner">
-                    <p>Places</p>
                     <ul className="menu-content">
                         {this.props.posts.map(post =>
-                            <li key={post.id}
-                                onClick={() => this.props.setMapPost(post)}
-                                onDoubleClick={() => this.props.displayPostContent(post)}>
-                                {post.id} - {post.title} - {post.isContentVisible ? 'true' : 'false'}
+                            <li key={post.id}>
+                                <a onMouseOver={() => this.props.setMapPost(post.id)}
+                                   onDoubleClick={() => this.props.displayPostContent(post.id)}>
+                                    {post.id} - {post.title} - {post.isContentVisible ? 'true' : 'false'}
+                                </a>
                             </li>
                         )}
-                        <li onClick={() => this.props.setMapPost(null)}>
-                            NULL
-                        </li>
                     </ul>
                 </div>
             </div>

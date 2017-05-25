@@ -1,17 +1,20 @@
-import Map from "../modules/Map/Map";
-import {displayPostContent} from "../actions"
-import {connect} from "react-redux";
+import _ from 'lodash'
+import Map from '../modules/Map/Map'
+import {displayPostContent} from '../actions'
+import {connect} from 'react-redux';
 
 const mapStateToProps = (state) => {
     return {
-        mapProperties: state.map,
+        mapProperties: Object.assign({}, state.map, {
+            post: _.find(state.posts, {'id': state.map.postId})
+        }),
         textOverlays: state.textOverlays
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        displayPostContent: post => dispatch(displayPostContent(post))
+        displayPostContent: postId => dispatch(displayPostContent(postId))
     }
 };
 

@@ -8,7 +8,7 @@ function post(state = {}, action) {
                 id: action.id,
                 date: new Date(action.date),
                 type: action.type,
-                title: place.title,
+                title: action.title,
                 content: action.content,
                 isContentVisible: false,
                 place: {
@@ -21,7 +21,7 @@ function post(state = {}, action) {
             };
         case 'SHOW_POST_CONTENT':
             return Object.assign({}, state, {
-                isContentVisible: action.post.id === state.id
+                isContentVisible: action.id === state.id
             });
         default:
             return state;
