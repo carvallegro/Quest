@@ -1,6 +1,7 @@
 /**
  * Created by vcarmignac on 26/3/17.
  */
+import dateFns from 'date-fns'
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 
@@ -26,9 +27,10 @@ class Menu extends Component {
                     <ul className="menu-content">
                         {this.props.posts.map(post =>
                             <li key={post.id}>
-                                <a onMouseOver={() => this.props.setMapPost(post.id)}
+                                <a onClick={() => this.props.setMapPost(post.id)}
                                    onDoubleClick={() => this.props.displayPostContent(post.id)}>
-                                    {post.id} - {post.title} - {post.isContentVisible ? 'true' : 'false'}
+                                    {dateFns.format(post.date, 'DD/MM/YYYY')} - {post.title}
+                                    - {post.isContentVisible ? 'true' : 'false'}
                                 </a>
                             </li>
                         )}

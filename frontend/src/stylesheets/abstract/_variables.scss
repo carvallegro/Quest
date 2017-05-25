@@ -110,3 +110,21 @@ $breakpoints: (
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
+
+/**
+ * Menu Variables
+ */
+$menu-action-inner-size: 40px;
+$menu-action-padding: 5px;
+$menu-action-size: $menu-action-inner-size + 2 * $menu-action-padding;
+$menu-background-color: map_get($amber-palette, 'dark-1');
+$menu-button-open-transition: transform 500ms ease-in;
+$menu-open-transition: width 500ms ease-in;
+$menu-text-color: $dark-blue;
+$menu-z-index: 3;
+
+/**
+ * Map Variables
+ */
+$map-container-offset: 10;
+$map-z-index: 1;

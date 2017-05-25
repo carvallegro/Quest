@@ -1,11 +1,6 @@
-$menu-text-color: $dark-blue;
-$menu-background-color: map_get($amber-palette, 'dark-1');
-$menu-open-transition: width 500ms ease-in;
-$button-open-transition: transform 500ms ease-in;
-
 div.menu-outter {
   position: fixed;
-  z-index: 1000;
+  z-index: $menu-z-index;
   top: 0;
   right: 0;
   height: 100vh;
@@ -21,19 +16,21 @@ div.menu-outter {
     a.menu-trigger {
       position: relative;
       top: 50%;
-      font-size: 2rem;
-      line-height: 2rem;
+
       color: $menu-text-color;
       &.menu-opener > i::before {
         transform: rotate(180deg);
-        transition: $button-open-transition;
+        transition: $menu-button-open-transition;
       }
     }
 
     .menu-header-actions {
       list-style: none;
       li {
-        padding: 5px 5px;
+        padding: $menu-action-padding $menu-action-padding;
+        font-size: $menu-action-inner-size;
+        line-height: $menu-action-inner-size;
+        cursor: pointer;
       }
       li.first {
         background-color: map_get($amber-palette, 'light-2');
@@ -74,11 +71,11 @@ div.menu-outter {
   &.open {
     div.menu-header a.menu-trigger.menu-opener > i::before {
       transform: rotate(0deg);
-      transition: $button-open-transition;
+      transition: $menu-button-open-transition;
     }
 
     div.menu-inner {
-      width: 200px;
+      width: 300px;
       transition: $menu-open-transition;
     }
   }
