@@ -1,3 +1,5 @@
+import * as types from '../actions/actionTypes'
+
 const initialState = {
     open: false,
     expand: false
@@ -5,11 +7,11 @@ const initialState = {
 
 function postContent(state = initialState, action) {
     switch (action.type) {
-        case 'POST_CONTENT_OPEN':
+        case types.POST_CONTENT_OPEN:
             return Object.assign({}, state, {
                 open: action.open
             });
-        case 'POST_CONTENT_EXPAND':
+        case types.POST_CONTENT_EXPAND:
             return Object.assign({}, state, {
                 expand: action.expand
             });

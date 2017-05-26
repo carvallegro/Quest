@@ -1,14 +1,16 @@
+import * as types from '../actions/actionTypes'
+
 const initialState = {
     open: false
 };
 
 function menu(state = initialState, action) {
     switch (action.type) {
-        case 'MENU_TOGGLE':
+        case types.MENU_TOGGLE:
             return Object.assign({}, state, {
                 open: !state.open
             });
-        case 'MENU_OPEN':
+        case types.MENU_OPEN:
             return Object.assign({}, state, {
                 open: action.open
             });

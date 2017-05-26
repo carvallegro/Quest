@@ -1,6 +1,8 @@
+import * as types from '../actions/actionTypes'
+
 function textOverlay(state = {}, action) {
     switch (action.type) {
-        case 'TEXT_OVERLAY_ADD':
+        case types.TEXT_OVERLAY_ADD:
             return {
                 id: action.id,
                 text: action.text,
@@ -17,15 +19,15 @@ function textOverlay(state = {}, action) {
 
 function textOverlays(state = [], action) {
     switch (action.type) {
-        case 'TEXT_OVERLAY_ADD':
+        case types.TEXT_OVERLAY_ADD:
             return [
                 ...state,
                 textOverlay(undefined, action)
             ];
-        case 'TEXT_OVERLAY_ADD_MULTIPLE':
+        case types.TEXT_OVERLAY_ADD_MULTIPLE:
             return [
                 ...state,
-                ...action.textOverlays.map(to => Object.assign({}, to, {type: 'TEXT_OVERLAY_ADD'}))
+                ...action.textOverlays.map(to => Object.assign({}, to, {type: types.TEXT_OVERLAY_ADD}))
             ];
         default:
             return state;

@@ -1,8 +1,9 @@
 import PinTypes from '../modules/PinTypes'
+import * as types from '../actions/actionTypes'
 
 function post(state = {}, action) {
     switch (action.type) {
-        case 'ADD_POST':
+        case types.POST_ADD:
             const place = action.place;
             return {
                 id: action.id,
@@ -25,22 +26,20 @@ function post(state = {}, action) {
 
 function posts(state = [], action) {
     switch (action.type) {
-        case 'ADD_POST':
+        case types.POST_ADD:
             return [
                 ...state,
                 post(undefined, Object.assign({}, action.post, {
-                    type: 'ADD_POST'
+                    type: types.POST_ADD
                 }))
             ];
-        case 'ADD_MULTIPLE_POSTS':
+        case types.POST_ADD_MULTIPLE:
             return [
                 ...state,
                 ...action.posts.map(p => post(undefined, Object.assign({}, p, {
-                    type: 'ADD_POST'
+                    type: types.POST_ADD
                 })))
             ];
-        case 'SHOW_POST_CONTENT':
-            return state.map(p => post(p, action));
         default:
             return state;
     }

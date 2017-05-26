@@ -1,55 +1,56 @@
+import * as types from './actionTypes'
+
 export const toggleMenu = () => {
     return {
-        type: 'MENU_TOGGLE'
+        type: types.MENU_TOGGLE
     };
 };
 
 export const openMenu = (open) => {
     return {
-        type: 'MENU_OPEN',
+        type: types.MENU_OPEN,
         open: open
     }
 };
 
 export const addMultipleTextOverlays = textOverlays => {
     return {
-        type: 'TEXT_OVERLAY_ADD_MULTIPLE',
+        type: types.TEXT_OVERLAY_ADD_MULTIPLE,
         textOverlays: textOverlays
     }
 };
 
 export const addPost = post => {
     return {
-        type: 'ADD_POST',
+        type: types.POST_ADD,
         post: post
     };
 };
 
 export const addMultiplesPosts = posts => {
     return {
-        type: 'ADD_MULTIPLE_POSTS',
+        type: types.POST_ADD_MULTIPLE,
         posts: posts
     };
 };
 
 export const setMapPost = (postId = null) => {
     return {
-        type: 'MAP_SET_POST',
+        type: types.MAP_SET_POST,
         postId: postId
     };
 };
 
-
 export const openPostContent = (open = false) => {
     return {
-        type: 'POST_CONTENT_OPEN',
+        type: types.POST_CONTENT_OPEN,
         open: open
     }
 };
 
 export const expandPostContent = (expand = false) => {
     return {
-        type: 'POST_CONTENT_EXPAND',
+        type: types.POST_CONTENT_EXPAND,
         expand: expand
     }
 };
