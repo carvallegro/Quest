@@ -71,9 +71,7 @@ class Map extends Component {
         return <PlaceMarker map={this.state.map}
                             pos={post.place.position}
                             type={post.place.pinType}
-                            onClick={() =>
-                                this.props.displayPostContent(post.id)
-                            }/>;
+                            onClick={this.props.displayPostContent}/>;
     }
 
     render() {
