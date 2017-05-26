@@ -78,7 +78,7 @@ $yellow-color: map_get($yellow-palette, 'base');
 
 /// Copy text color
 /// @type Color
-$text-color: rgb(34, 34, 34) !default;
+$text-color: $darker-blue !default;
 
 /// Main brand color
 /// @type Color
@@ -128,3 +128,15 @@ $menu-z-index: 3;
  */
 $map-container-offset: 10;
 $map-z-index: 1;
+
+/**
+ * PostContent Variables
+ */
+$post-content-z-index: 2;
+$post-content-width: 300px;
+$post-content-action-transition: opacity 300ms ease-out;
+$post-content-expand-transition: left 300ms ease-in;
+$post-content-background-color: map_get($amber-palette, 'light-4');
+$post-content-text-color: $dark-blue;
+$post-content-action-inner-size: 30px;
+$post-content-action-padding: 5px;

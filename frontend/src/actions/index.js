@@ -1,7 +1,14 @@
 export const toggleMenu = () => {
     return {
-        type: 'TOGGLE_MENU'
+        type: 'MENU_TOGGLE'
     };
+};
+
+export const openMenu = (open) => {
+    return {
+        type: 'MENU_OPEN',
+        open: open
+    }
 };
 
 export const addMultipleTextOverlays = textOverlays => {
@@ -27,15 +34,23 @@ export const addMultiplesPosts = posts => {
 
 export const setMapPost = (postId = null) => {
     return {
-        type: 'SET_MAP_POST',
+        type: 'MAP_SET_POST',
         postId: postId
     };
 };
 
-export const displayPostContent = (postId = null) => {
+
+export const openPostContent = (open = false) => {
     return {
-        type: 'SHOW_POST_CONTENT',
-        id: postId
+        type: 'POST_CONTENT_OPEN',
+        open: open
+    }
+};
+
+export const expandPostContent = (expand = false) => {
+    return {
+        type: 'POST_CONTENT_EXPAND',
+        expand: expand
     }
 };
 

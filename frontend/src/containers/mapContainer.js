@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import Map from '../modules/Map/Map'
-import {displayPostContent} from '../actions'
+import {openPostContent} from '../actions'
 import {connect} from 'react-redux';
 
 const mapStateToProps = (state) => {
@@ -14,7 +14,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        displayPostContent: postId => dispatch(displayPostContent(postId))
+        displayPostContent: () => dispatch(openPostContent(true))
     }
 };
 

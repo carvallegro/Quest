@@ -13,6 +13,8 @@
     "react": "^15.4.2",
     "react-async-script-loader": "^0.2.2",
     "react-dom": "^15.4.2",
+    "react-markdown": "^2.5.0",
+    "react-onclickoutside": "^6.0.1",
     "react-redux": "^5.0.3",
     "react-tap-event-plugin": "^2.0.1",
     "redux": "^3.5.2",

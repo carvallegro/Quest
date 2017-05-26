@@ -1,6 +1,7 @@
-import React, {Component} from 'react';
-import MenuContainer from '../containers/menuContainer';
-import MapContainer from '../containers/mapContainer';
+import React, {Component} from 'react'
+import MenuContainer from '../containers/menuContainer'
+import MapContainer from '../containers/mapContainer'
+import PostContent from '../containers/postContentContainer'
 import scriptLoader from 'react-async-script-loader'
 
 /*global google*/
@@ -32,6 +33,7 @@ class App extends Component {
         return (
             <div className="app-content">
                 <MenuContainer/>
+                <PostContent />
                 <MapContainer mapLoaded={this.state.isMapsLoaded}>
                 </MapContainer>
             </div>
