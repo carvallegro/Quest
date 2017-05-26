@@ -4,8 +4,14 @@
 import dateFns from 'date-fns'
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
+import onClickOutside from 'react-onclickoutside'
+
 
 class Menu extends Component {
+    handleClickOutside = evt => {
+        this.props.openMenu(false);
+    };
+
     render() {
         let menuOuterClasses = 'menu-outter ' + (this.props.isMenuOpen ? 'open' : '');
         return (
@@ -28,9 +34,8 @@ class Menu extends Component {
                         {this.props.posts.map(post =>
                             <li key={post.id}>
                                 <a onClick={() => this.props.setMapPost(post.id)}
-                                   onDoubleClick={() => this.props.displayPostContent(post.id)}>
+                                   onDoubleClick={this.props.displayPostContent}>
                                     {dateFns.format(post.date, 'DD/MM/YYYY')} - {post.title}
-                                    - {post.isContentVisible ? 'true' : 'false'}
                                 </a>
                             </li>
                         )}
@@ -45,9 +50,10 @@ class Menu extends Component {
 Menu.propTypes = {
     isMenuOpen: PropTypes.bool.isRequired,
     toggleMenu: PropTypes.func.isRequired,
+    openMenu: PropTypes.func.isRequired,
     setMapPost: PropTypes.func.isRequired,
     displayPostContent: PropTypes.func.isRequired,
 };
 
 
-export default Menu;
+export default onClickOutside(Menu);

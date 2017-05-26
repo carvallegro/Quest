@@ -10,7 +10,6 @@ function post(state = {}, action) {
                 type: action.type,
                 title: action.title,
                 content: action.content,
-                isContentVisible: false,
                 place: {
                     id: place.id,
                     title: place.title,
@@ -19,10 +18,6 @@ function post(state = {}, action) {
                     position: place.position
                 }
             };
-        case 'SHOW_POST_CONTENT':
-            return Object.assign({}, state, {
-                isContentVisible: action.id === state.id
-            });
         default:
             return state;
     }

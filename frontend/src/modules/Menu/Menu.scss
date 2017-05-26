@@ -49,8 +49,11 @@ div.menu-outter {
   div.menu-inner {
     display: inline-block;
     width: 0px;
+    //noinspection SassScssResolvedByNameOnly
     transition: $menu-open-transition;
+    //noinspection SassScssResolvedByNameOnly
     background-color: $menu-background-color;
+    //noinspection SassScssResolvedByNameOnly
     color: $menu-text-color;
     overflow-x: hidden;
     white-space: nowrap;
@@ -62,6 +65,7 @@ div.menu-outter {
           .fi {
             font-size: 2rem;
           }
+          //noinspection SassScssResolvedByNameOnly
           color: $menu-text-color;
         }
       }
