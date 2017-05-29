@@ -4,12 +4,12 @@
     "date": "2012-04-23T18:25:43.511Z",
     "type": "STORY OR QUEST",
     "title": "First article",
-    "content": "foo bar content about the First Article",
+    "content": "foo bar `content` about the First Article",
     "place": {
       "id": 30,
       "title": "Pariss",
       "show_title": false,
-      "pinType": "HOUSE",
+      "pinType": "PIN",
       "position": {
         "lat": 48.859529,
         "lng": 2.343104
@@ -21,12 +21,12 @@
     "date": "2012-04-30T18:25:43.511Z",
     "type": "STORY OR QUEST",
     "title": "Second article",
-    "content": "foo bar about the Seconde Article",
+    "content": "foo bar about the `Seconde` Article",
     "place": {
       "id": 10,
       "title": "Melbourne",
       "show_title": false,
-      "pinType": "HOME",
+      "pinType": "PLACEHOLDER_3",
       "position": {
         "lat": -37.816977,
         "lng": 144.965170

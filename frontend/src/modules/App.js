@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import MenuContainer from '../containers/menuContainer'
-import MapContainer from '../containers/mapContainer'
+import Menu from '../containers/menuContainer'
+import Map from '../containers/mapContainer'
 import PostContent from '../containers/postContentContainer'
 import scriptLoader from 'react-async-script-loader'
 
@@ -14,7 +14,7 @@ class App extends Component {
     }
 
     componentWillReceiveProps({isScriptLoaded, isScriptLoadSucceed}) {
-        if (isScriptLoaded && !this.props.isScriptLoaded) { // load finished
+        if (isScriptLoaded && !this.props.isScriptLoaded) {
             if (isScriptLoadSucceed) {
                 this.setState({
                     isMapsLoaded: true
@@ -32,10 +32,10 @@ class App extends Component {
 
         return (
             <div className="app-content">
-                <MenuContainer/>
+                <Menu/>
                 <PostContent />
-                <MapContainer mapLoaded={this.state.isMapsLoaded}>
-                </MapContainer>
+                <Map mapLoaded={this.state.isMapsLoaded}>
+                </Map>
             </div>
         );
     }
