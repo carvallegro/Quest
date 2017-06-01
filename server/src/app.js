@@ -1,12 +1,13 @@
-import express from 'express'
 import config from 'config'
+import express from 'express'
 import cors from 'cors'
+import compression from 'compression'
+import helmet from 'helmet'
 import http from 'http'
 import post from './routes/post'
 import textOverlay from './routes/text_overlay'
 
-console.log('NODE_ENV: ' + config.util.getEnv('NODE_ENV'));
-console.log(config.server.port)
+console.log('Server running with NODE_ENV: ' + config.util.getEnv('NODE_ENV'));
 
 const app = express();
 
@@ -14,6 +15,9 @@ var corsOptions = {
     origin: config.front.url
 };
 app.use(cors(corsOptions));
+app.use(compression());
+app.use(helmet());
+
 
 app.get('/', (req, res) => res.send('Hello World ! Welcome to the  Quest backend :)'));
 
