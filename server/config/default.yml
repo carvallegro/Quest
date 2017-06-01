@@ -1,0 +1,4 @@
+server:
+  port: 3100
+front:
+  url: http://localhost:3000
