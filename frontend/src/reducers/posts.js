@@ -1,4 +1,4 @@
-import PinTypes from '../modules/PinTypes'
+import PinTypes from '../components/PinTypes'
 import * as types from '../actions/actionTypes'
 
 function post(state = {}, action) {

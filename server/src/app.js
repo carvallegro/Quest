@@ -18,7 +18,6 @@ app.use(cors(corsOptions));
 app.use(compression());
 app.use(helmet());
 
-
 app.get('/', (req, res) => res.send('Hello World ! Welcome to the  Quest backend :)'));
 
 // Routes settings

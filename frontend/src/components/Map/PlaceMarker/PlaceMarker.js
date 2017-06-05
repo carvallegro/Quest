@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-import MapObject from '../MapObject';
+import MapObject from '../GenericMapObject';
 import GoogleMap from '../GoogleMapProvider';
-import PinType from '../PinTypes';
+import PinType from '../../PinTypes';
 
 class PlaceMarker extends MapObject {
     DEFAULT_PIN_TYPE = PinType.PIN;

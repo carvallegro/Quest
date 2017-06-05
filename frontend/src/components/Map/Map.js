@@ -4,9 +4,9 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types'
 import googleMapStyle from './google-map-custom-style.json';
-import GoogleMap from '../GoogleMapProvider'
-import TextOverlay from '../TextOverlay/TextOverlay'
-import PlaceMarker from '../PlaceMarker/PlaceMarker'
+import GoogleMap from './GoogleMapProvider'
+import TextOverlay from './TextOverlay/TextOverlay'
+import PlaceMarker from './PlaceMarker/PlaceMarker'
 
 /*global google*/
 class Map extends Component {

@@ -1,6 +1,6 @@
 import _ from 'lodash'
-import Map from '../modules/Map/Map'
-import {openPostContent} from '../actions'
+import Map from './Map'
+import {openPostContent} from '../../actions/postContent'
 import {connect} from 'react-redux';
 
 const mapStateToProps = (state) => {

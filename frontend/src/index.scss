@@ -19,13 +19,12 @@
 // 4. Layout-related sections (layout)
 
 // 5. Components
-@import
-  'modules/App.scss',
-  'modules/Menu/Menu.scss',
-  'modules/Map/Map.scss',
-  'modules/MapLine/MapLine.scss',
-  'modules/TextOverlay/TextOverlay.scss',
-  'modules/PlaceMarker/PlaceMarker.scss',
-  'modules/PostContent/PostContent.scss';
+@import 'components/App.scss',
+'components/Menu/Menu.scss',
+'components/Map/Map.scss',
+'components/Map/MapLine/MapLine.scss',
+'components/Map/TextOverlay/TextOverlay.scss',
+'components/Map/PlaceMarker/PlaceMarker.scss',
+'components/PostContent/PostContent.scss';
 
 

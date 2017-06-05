@@ -1,5 +1,5 @@
 import React from 'react';
-import MapObject from '../MapObject';
+import MapObject from '../GenericMapObject';
 import GoogleMap from '../GoogleMapProvider';
 
 class MapLine extends MapObject {

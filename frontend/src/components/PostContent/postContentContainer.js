@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import {connect} from 'react-redux'
-import {openPostContent, expandPostContent} from '../actions'
-import PostContent from "../modules/PostContent/PostContent";
+import {openPostContent, expandPostContent} from '../../actions/postContent'
+import PostContent from "./PostContent";
 
 
 const mapStateToProps = (state) => {

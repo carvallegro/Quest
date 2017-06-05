@@ -3,7 +3,7 @@
  */
 import React from 'react'
 import PropTypes from 'prop-types'
-import MapObject from '../MapObject'
+import MapObject from '../GenericMapObject'
 import GoogleMap from '../GoogleMapProvider'
 
 class TextOverlay extends MapObject {

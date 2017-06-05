@@ -1,5 +1,5 @@
 import {inherits, calculateSize} from '../_common-gmap-objects';
-import {toggleDOMDefault, onRemoveDefault} from '../_defaults';
+import {toggleDOMDefault, onRemoveDefault} from '../_defaults-gmap-fn';
 
 /*global google*/
 export default () => {

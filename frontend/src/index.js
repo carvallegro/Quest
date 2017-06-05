@@ -3,9 +3,10 @@ import 'whatwg-fetch'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
-import App from './modules/App'
+import App from './components/App'
 import configureStore from './configureStore'
-import {loadPosts, loadTextOverlays} from './actions'
+import {loadPosts} from './actions/post'
+import {loadTextOverlays} from './actions/textOverlay'
 import './index.css'
 
 

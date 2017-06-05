@@ -1,6 +1,7 @@
 import {connect} from 'react-redux'
-import {toggleMenu, openMenu, setMapPost, openPostContent} from '../actions'
-import Menu from '../modules/Menu/Menu'
+import {openPostContent} from '../../actions/postContent'
+import {toggleMenu, openMenu, setMapPost} from '../../actions/menu'
+import Menu from './Menu'
 
 const mapStateToProps = (state) => {
     return {

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import Menu from '../containers/menuContainer'
-import Map from '../containers/mapContainer'
-import PostContent from '../containers/postContentContainer'
+import Menu from './Menu/menuContainer'
+import Map from './Map/mapContainer'
+import PostContent from './PostContent/postContentContainer'
 import scriptLoader from 'react-async-script-loader'
 
 /*global google*/
